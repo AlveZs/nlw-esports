@@ -6,15 +6,35 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  header: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 32,
+    marginTop: 28,
+    justifyContent: 'space-between',
+  },
   logo: {
-    width: 214,
-    height: 120,
-    marginTop: 74,
-    marginBottom: 48,
+    width: 72,
+    height: 40,
+  },
+  right: {
+    width: 20,
+    height: 20,
+  },
+  cover: {
+    width: 311,
+    height: 160,
+    borderRadius: 8,
+    marginTop: 32,
+  },
+  containerList: {
+    width: '100%',
   },
   contentList: {
     paddingLeft: 32,
     paddingRight: 64,
+    alignItems: 'flex-start',
   },
   emptyListText: {
     color: THEME.COLORS.CAPTION_300,

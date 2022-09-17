@@ -37,8 +37,8 @@ app.get('/games/:id/ads', async (request, response) => {
       name: true,
       yearsPlaying: true,
       weekDays: true,
-      hoursStart: true,
-      hoursEnd: true,
+      hourStart: true,
+      hourEnd: true,
       useVoiceChannel: true,
     },
     where: {
@@ -53,8 +53,8 @@ app.get('/games/:id/ads', async (request, response) => {
     return {
       ...ad,
       weekDays: ad.weekDays.split(','),
-      hoursStart: convertMinutesToHourString(ad.hoursStart),
-      hoursEnd: convertMinutesToHourString(ad.hoursEnd),
+      hoursStart: convertMinutesToHourString(ad.hourStart),
+      hoursEnd: convertMinutesToHourString(ad.hourEnd),
     }
   }));
 });
@@ -66,8 +66,8 @@ app.post('/games/:id/ads', async (request, response) => {
     yearsPlaying,
     discord,
     weekDays,
-    hoursStart,
-    hoursEnd,
+    hourStart,
+    hourEnd,
     useVoiceChannel,
   } = request.body;
 
@@ -78,8 +78,8 @@ app.post('/games/:id/ads', async (request, response) => {
       yearsPlaying,
       discord,
       weekDays: weekDays.join(','),
-      hoursStart: convertHourStringToMinutes(hoursStart),
-      hoursEnd: convertHourStringToMinutes(hoursEnd),
+      hourStart: convertHourStringToMinutes(hourStart),
+      hourEnd: convertHourStringToMinutes(hourEnd),
       useVoiceChannel,
     }
   });

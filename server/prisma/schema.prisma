@@ -25,8 +25,8 @@ model Ad {
   yearsPlaying    Int
   discord         String
   weekDays        String
-  hoursStart      Int
-  hoursEnd        Int
+  hourStart       Int
+  hourEnd         Int
   useVoiceChannel Boolean
   createdAt       DateTime @default(now())
 
